@@ -40,6 +40,7 @@ node=${node:-1}
 # Import utils.
 source $NCTL/sh/utils/misc.sh
 
+# Pull on-chain deploy representation & pull.
 $(get_path_to_client $net) get-deploy \
     --node-address $(get_node_address_rpc $net $node) \
     $deploy_hash \

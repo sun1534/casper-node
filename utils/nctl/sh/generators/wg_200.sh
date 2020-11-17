@@ -4,11 +4,13 @@
 # Globals:
 #   NCTL - path to nctl home directory.
 # Arguments:
-#   Network ordinal identifier (int).
-#   Node ordinal identifier (int).
-#   User ordinal identifier (int).
-#   Bid amount (motes).
-#   Delegation rate (float).
+#   Network ordinal identifier (optional).
+#   Node ordinal identifier (optional).
+#   User ordinal identifier (optional).
+#   Bid amount (optional).
+#   Delegation rate (optional).
+#   Gas price (optional).
+#   Gas payment (optional).
 
 #######################################
 # Destructure input args.

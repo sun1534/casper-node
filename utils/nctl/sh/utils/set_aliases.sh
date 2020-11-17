@@ -63,8 +63,8 @@ alias nctl-view-node-storage='source $NCTL/sh/views/view_node_storage.sh'
 
 # Views: node metrcs.
 alias nctl-view-node-metrics='source $NCTL/sh/views/view_node_metrics.sh'
-alias nctl-view-node-metric-pending-deploy='source $NCTL/sh/views/view_node_metrics.sh metric=pending_deploy'
-alias nctl-view-node-metric-finalised-block-count='source $NCTL/sh/views/view_node_metrics.sh metric=amount_of_blocks'
+alias nctl-view-node-pending-deploy-count='source $NCTL/sh/views/view_node_metrics.sh metric=pending_deploy'
+alias nctl-view-node-finalised-block-count='source $NCTL/sh/views/view_node_metrics.sh metric=amount_of_blocks'
 
 # Views: network.
 alias nctl-view-faucet-account='source $NCTL/sh/views/view_faucet_account.sh'
@@ -88,9 +88,9 @@ alias nctl-view-validator-account-key='source $NCTL/sh/views/view_validator_acco
 alias nctl-view-validator-secret-key-path='source $NCTL/sh/views/view_validator_secret_key_path.sh'
 
 # Contracts #1: ERC-20.
-alias nctl-contracts-erc20-do-approve='source $NCTL/sh/contracts/erc20/do_approve.sh'
-alias nctl-contracts-erc20-do-install='source $NCTL/sh/contracts/erc20/do_install.sh'
-alias nctl-contracts-erc20-do-fund-users='source $NCTL/sh/contracts/erc20/do_fund_users.sh'
-alias nctl-contracts-erc20-do-transfer='source $NCTL/sh/contracts/erc20/do_transfer.sh'
-alias nctl-contracts-erc20-view-details='source $NCTL/sh/contracts/erc20/view_details.sh'
-alias nctl-contracts-erc20-view-balances='source $NCTL/sh/contracts/erc20/view_balances.sh'
+alias nctl-erc20-do-approve='source $NCTL/sh/contracts/erc20/do_approve.sh'
+alias nctl-erc20-do-install='source $NCTL/sh/contracts/erc20/do_install.sh'
+alias nctl-erc20-do-fund-users='source $NCTL/sh/contracts/erc20/do_fund_users.sh'
+alias nctl-erc20-do-transfer='source $NCTL/sh/contracts/erc20/do_transfer.sh'
+alias nctl-erc20-view-details='source $NCTL/sh/contracts/erc20/view_details.sh'
+alias nctl-erc20-view-balances='source $NCTL/sh/contracts/erc20/view_balances.sh'

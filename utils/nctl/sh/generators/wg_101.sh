@@ -1,14 +1,13 @@
 #!/usr/bin/env bash
 #
-# Dispatches wasmless transfers to a test net.
+# Fund user accounts from faucet.
 # Globals:
 #   NCTL - path to nctl home directory.
 # Arguments:
-#   Network ordinal identifier.
-#   Node ordinal identifier.
-#   User ordinal identifier.
-#   Transfer dispatch count.
-#   Transfer dispatch interval.
+#   Network ordinal identifier (optional).
+#   Node ordinal identifier (optional).
+#   Gas price (optional).
+#   Gas payment (optional).
 
 #######################################
 # Destructure input args.

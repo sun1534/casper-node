@@ -4,11 +4,14 @@
 # Globals:
 #   NCTL - path to nctl home directory.
 # Arguments:
-#   Network ordinal identifier.
-#   Node ordinal identifier.
-#   User ordinal identifier.
-#   Transfer dispatch count.
-#   Transfer dispatch interval.
+#   Network ordinal identifier (optional).
+#   Node ordinal identifier (optional).
+#   User ordinal identifier (optional).
+#   Transfer amount (optional).
+#   Transfer dispatch count (optional).
+#   Transfer dispatch interval (optional).
+#   Gas price (optional).
+#   Gas payment (optional).
 
 #######################################
 # Destructure input args.

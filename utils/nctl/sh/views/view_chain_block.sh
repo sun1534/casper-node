@@ -41,6 +41,7 @@ node=${node:-1}
 # Import utils.
 source $NCTL/sh/utils/misc.sh
 
+# Pull on-chain block representaiton & render.
 if [ "$block_hash" ]; then
     $(get_path_to_client $net) get-block \
         --node-address $(get_node_address_rpc $net $node) \

@@ -277,15 +277,22 @@ function get_genesis_timestamp()
 #   NCTL - path to nctl home directory.
 # Arguments:
 #   Network ordinal identifier.
+#   Node ordinal identifier.
+#   Account key.
 #   State root hash.
-#   Accoubnt key.
 #######################################
 function get_main_purse_uref() {
-echo $(
-        source $NCTL/sh/views/view_chain_account.sh net=$1 root-hash=$2 account-key=$3 \
+    if [ ! "$4" ]; then
+        state_root_hash=$(get_state_root_hash $1 $2)
+    else
+        state_root_hash=$4
+    fi
+    echo $(
+        source $NCTL/sh/views/view_chain_account.sh \
+            net=$1 node=$2 account-key=$3 root-hash=$state_root_hash \
             | jq '.stored_value.Account.main_purse' \
             | sed -e 's/^"//' -e 's/"$//'
-    )
+    )        
 }
 
 #######################################
@@ -522,9 +529,9 @@ function render_account() {
 #   Account ordinal identifier (optional).
 #######################################
 function render_account_balance() {
-    state_root_hash=$(get_state_root_hash $1 $2)
     account_key=$(get_account_key $1 $3 $4)
-    purse_uref=$(get_main_purse_uref $1 $state_root_hash $account_key)
+    state_root_hash=$(get_state_root_hash $1 $2)
+    purse_uref=$(get_main_purse_uref $1 $2 $account_key $state_root_hash)
     if [ $3 = $NCTL_ACCOUNT_TYPE_FAUCET ]; then
         prefix="net-"$1":faucet"
     elif [ $3 = $NCTL_ACCOUNT_TYPE_NODE ]; then

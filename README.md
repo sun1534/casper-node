@@ -98,9 +98,12 @@ The nodes can take quite a long time to become fully interconnected.  This is de
 `network.gossip_interval` value (in milliseconds).  Nodes gossip their own listening addresses at
 this frequency.
 
-There is a [tool](https://github.com/CasperLabs/casper-node/tree/master/utils/nctl) which automates the process of running multiple nodes on a single machine.
 
 Note that running multiple nodes on a single machine is normally only recommended for test purposes.
+
+### Testing an N node local network with NCTL
+
+[NCTL] (https://github.com/CasperLabs/casper-node/tree/master/utils/nctl) is a posix based tool that streamlines & automates spinning-up & testing N-node networks in a localised setting.  As well as a wide array of node setup & control features, it also provides a set of commands for viewing on-chain information, testing pre-bundled smart contracts ... etc.
 
 ## Configuration
 
